@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_OK"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:background="@color/orange"
+        android:text="@android:string/ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.699"
+        tools:ignore="TextContrastCheck" />
+
+    <RadioButton
+        android:id="@+id/radiobutton_plus"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="@string/radiobutton_plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.247" />
+
+    <RadioButton
+        android:id="@+id/radiobutton_minus"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="@string/radiobutton_minus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiobutton_plus"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <RadioButton
+        android:id="@+id/radiobutton_multiply"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/radiobutton_multiply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiobutton_minus"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioButton
+        android:id="@+id/radiobutton_divide"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/radiobutton_divide"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiobutton_multiply"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextNumber_a"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:ems="10"
+        android:hint="@string/textView_a"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber_b"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/editTextNumber_b"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:hint="@string/textView_b"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView_plus"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="120dp"
+        android:gravity="center"
+        android:hint="a + b"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/radiobutton_plus"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.245" />
+
+    <TextView
+        android:id="@+id/textView_minus"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:hint="a - b"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toEndOf="@+id/radiobutton_minus"
+        app:layout_constraintTop_toBottomOf="@+id/textView_plus"
+        app:layout_constraintVertical_bias="0.002" />
+
+    <TextView
+        android:id="@+id/textView_multiply"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:hint="a * b"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toEndOf="@+id/radiobutton_multiply"
+        app:layout_constraintTop_toBottomOf="@+id/textView_minus"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView_divide"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:hint="a / b"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toEndOf="@+id/radiobutton_divide"
+        app:layout_constraintTop_toBottomOf="@+id/textView_multiply"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

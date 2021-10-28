@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lab1</string>
+    <string name="radiobutton_plus">a + b = </string>
+    <string name="radiobutton_minus">a - b = </string>
+    <string name="radiobutton_multiply">a * b = </string>
+    <string name="radiobutton_divide">a / b = </string>
+    <string name="textView_a">Enter A:</string>
+    <string name="textView_b">Enter B:</string>
+</resources>
