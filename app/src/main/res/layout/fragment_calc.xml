@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentCalc">
+
+    <Button
+        android:id="@+id/buttonOk"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="260px"
+        android:layout_marginTop="900px"
+        android:background="@color/orange"
+        android:text="@android:string/ok"
+        android:textColor="@color/white"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tVDivide"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="550px"
+        android:layout_marginTop="700px"
+        android:gravity="center"
+        android:text="a / b"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <RadioButton
+        android:id="@+id/rbtnMinus"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="260px"
+        android:layout_marginTop="400px"
+        android:text="@string/rbtn_minus"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <RadioButton
+        android:id="@+id/rbtnDivide"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="260px"
+        android:layout_marginTop="700px"
+        android:autoText="false"
+        android:text="@string/rbtn_divide"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <RadioButton
+        android:id="@+id/rbtnPlus"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="260px"
+        android:layout_marginTop="250px"
+        android:text="@string/rbtn_plus"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tVPlus"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="550px"
+        android:layout_marginTop="250px"
+        android:gravity="center"
+        android:text="a + b"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tVMultiply"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="550px"
+        android:layout_marginTop="550px"
+        android:gravity="center"
+        android:text="a * b"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tVMinus"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="550px"
+        android:layout_marginTop="400px"
+        android:gravity="center"
+        android:text="a - b"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/enterB"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="550px"
+        android:layout_marginTop="100px"
+        android:ems="10"
+        android:hint="@string/textView_b"
+        android:inputType="numberDecimal"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/enterA"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="130px"
+        android:layout_marginTop="100px"
+        android:ems="10"
+        android:hint="@string/textView_a"
+        android:inputType="numberDecimal"
+        tools:ignore="TextContrastCheck" />
+
+    <RadioButton
+        android:id="@+id/rbtnMultiply"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="260px"
+        android:layout_marginTop="550px"
+        android:text="@string/rbtn_multiply"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="420px"
+        android:layout_marginTop="1050px"
+        android:background="@color/orange"
+        android:text="@android:string/cancel"
+        android:textColor="@color/white"
+        tools:ignore="TextContrastCheck" />
+
+</FrameLayout>

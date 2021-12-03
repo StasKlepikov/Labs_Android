@@ -1,9 +1,12 @@
 <resources>
     <string name="app_name">Lab1</string>
-    <string name="radiobutton_plus">a + b = </string>
-    <string name="radiobutton_minus">a - b = </string>
-    <string name="radiobutton_multiply">a * b = </string>
-    <string name="radiobutton_divide">a / b = </string>
+    <string name="rbtn_plus">a + b = </string>
+    <string name="rbtn_minus">a - b = </string>
+    <string name="rbtn_multiply">a * b = </string>
+    <string name="rbtn_divide">a / b = </string>
     <string name="textView_a">Enter A:</string>
     <string name="textView_b">Enter B:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="info">Name: SimpleCalculator \nAuthor: Stas Klepikov \nVersion: 1.1.0 \nGitHub: https://github.com/StasKlepikov</string>
+
 </resources>
