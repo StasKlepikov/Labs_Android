@@ -9,51 +9,111 @@
     <Button
         android:id="@+id/btnInfo"
         android:layout_width="80dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:background="@color/grey"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_pressed_system"
         android:gravity="center"
         android:text="Info"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/fragment"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.97"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHistory"
+        app:layout_constraintVertical_bias="0.666"
         app:rippleColor="@color/grey"
         tools:ignore="SpeakableTextPresentCheck,TextContrastCheck,TouchTargetSizeCheck,UnknownId" />
 
     <Button
         android:id="@+id/btnCalc"
-        android:layout_width="80dp"
-        android:layout_height="35dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/grey"
+        android:layout_width="85dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_pressed_play"
         android:gravity="center"
         android:text="Сalculator"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.971"
+        app:layout_constraintVertical_bias="0.955"
         app:rippleColor="@color/grey"
         tools:ignore="SpeakableTextPresentCheck,TextContrastCheck,TouchTargetSizeCheck,UnknownId" />
 
     <FrameLayout
         android:id="@+id/place_holder"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="450dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </FrameLayout>
+
+    <Button
+        android:id="@+id/btnHistory"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_pressed_system"
+        android:text="History"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.843"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_pressed_play"
+        android:text="Play"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.843"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_pressed_stop"
+        android:text="Stop"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnVideo"
+        android:layout_width="85dp"
+        android:layout_height="40dp"
+        android:background="@color/grey"
+        android:text="Video"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnHistory"
+        app:layout_constraintStart_toEndOf="@+id/btnPlay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.845"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

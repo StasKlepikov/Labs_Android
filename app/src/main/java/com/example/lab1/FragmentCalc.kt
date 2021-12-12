@@ -22,34 +22,49 @@ class FragmentCalc : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.buttonOk.setOnClickListener {
-            var res: Double
+            var resPlus: Double
+            var resMinus: Double
+            var resMultiply: Double
+            var resDivide: Double
 
             if (binding.enterA.text.isNullOrEmpty() || binding.enterB.text.isNullOrEmpty()) {
                 Toast.makeText( activity,"Make your choice firstly", Toast.LENGTH_SHORT).show()
             } else {
-
+                clear()
                 if (binding.rbtnPlus.isChecked) {
-                    res = binding.enterA.text.toString().toDouble() + binding.enterB.text.toString().toDouble()
-                    binding.tVPlus.text = res.toString()
+
+                    resPlus = binding.enterA.text.toString().toDouble() + binding.enterB.text.toString().toDouble()
+                    binding.tVPlus.text = resPlus.toString()
+
 
                 }
                 if (binding.rbtnMinus.isChecked) {
-                    res = binding.enterA.text.toString().toDouble() - binding.enterB.text.toString().toDouble()
-                    binding.tVMinus.text = res.toString()
+
+                    resMinus = binding.enterA.text.toString().toDouble() - binding.enterB.text.toString().toDouble()
+                    binding.tVMinus.text = resMinus.toString()
                 }
                 if (binding.rbtnMultiply.isChecked) {
 
-                    res = binding.enterA.text.toString().toDouble() * binding.enterB.text.toString().toDouble()
-                    binding.tVMultiply.text = res.toString()
+                    resMultiply = binding.enterA.text.toString().toDouble() * binding.enterB.text.toString().toDouble()
+                    binding.tVMultiply.text = resMultiply.toString()
                 }
                 if (binding.rbtnDivide.isChecked) {
 
-                    res = binding.enterA.text.toString().toDouble() / binding.enterB.text.toString().toDouble()
-                    binding.tVDivide.text = res.toString()
+                    resDivide = binding.enterA.text.toString().toDouble() / binding.enterB.text.toString().toDouble()
+                    binding.tVDivide.text = resDivide.toString()
+                }
+
+                realm.executeTransaction { realm ->
+                    realm.insert(Result(plus = binding.tVPlus.text.toString(),
+                        minus = binding.tVMinus.text.toString(),
+                        multiply = binding.tVMultiply.text.toString(),
+                        divide = binding.tVDivide.text.toString(),
+                        _partition = "123" ))
                 }
             }
         }
         binding.buttonCancel.setOnClickListener {
+            clear()
             binding.rbtnPlus.isChecked = false
             binding.rbtnMinus.isChecked = false
             binding.rbtnMultiply.isChecked = false
@@ -57,9 +72,15 @@ class FragmentCalc : Fragment() {
         }
     }
 
+    private fun clear(){
+        binding.tVPlus.text = ""
+        binding.tVMinus.text = ""
+        binding.tVMultiply.text = ""
+        binding.tVDivide.text = ""
+    }
+
     companion object {
         @JvmStatic
         fun newInstance() = FragmentCalc()
-
     }
 }
